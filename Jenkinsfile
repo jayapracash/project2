@@ -46,14 +46,14 @@ pipeline {
                 CANARY_REPLICAS = 1
             }
             steps {
-                /*
+                
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'train-schedule-kube-canary.yml',
                     enableConfigSubstitution: true
                 )
-                */
-               sh 'ls -l ;kubectl create -f ${WORKSPACE}/train-schedule-kube-canary.yaml'
+                
+               //sh 'ls -l ;kubectl create -f ${WORKSPACE}/train-schedule-kube-canary.yaml'
             }
         }
         stage('DeployToProduction') {

@@ -13,9 +13,8 @@ spec:
     nodePort: 300011
 
 ---
-
 apiVersion: apps/v1
-kind: Deployment
+kind:Deployment
 metadata:
   name: train-schedule-deployment-canary
   labels:

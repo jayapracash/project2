@@ -53,7 +53,7 @@ pipeline {
                     enableConfigSubstitution: true
                 )
                 */
-               sh 'ls -l ;kubectl create -f train-schedule-kube-canary.yaml'
+               sh 'ls -l ;kubectl create -f ./train-schedule-kube-canary.yaml'
             }
         }
         stage('DeployToProduction') {
